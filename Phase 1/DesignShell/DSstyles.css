@@ -1,0 +1,87 @@
+body{
+    color: #68857f;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  h2{
+    font-size: 30x;
+    margin-top: 50px;
+    font-weight: normal;
+    padding-bottom: 10px;
+  }
+  
+  h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+  }
+  
+  div{
+    font-size: 20px;
+  }
+  
+  p{
+    line-height: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+    font-size: 10px;
+    font-style: italic;
+  }
+  
+  ul{
+    display: inline-block ;
+    color: black;
+}
+
+  a{
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+}
+
+a:hover{
+    background-color: grey;
+    color: white;
+}
+  
+
+  #OverallArea{background-color: white;
+
+    border: 10px black  solid; /*short cut */
+    padding: 100px;
+    margin: 20px;
+    position: relative;} /*This is a ID selector*/
+    
+
+  #HeaderArea{background-color: lightblue;
+    border: 5px gold solid; /*short cut */
+    width: 800px;
+    height: 200px;
+    padding: 50px;
+    margin: 20px;
+    position: relative;} /*This is a ID selector*/
+    
+
+  #BodyArea{background-color: chartreuse;
+    border: 5px gold solid; /*short cut */
+    width: 800px;
+    height: 200px;
+    padding: 50px;
+    margin: 20px;
+    position: relative;
+  } /*This is a ID selector*/
+
+  #FooterArea{background-color: lightcoral;
+    border: 5px gold solid; /*short cut */
+    width: 800px;
+    height: 200px;
+    padding: 50px;
+    margin: 20px;
+    position: relative;}
+  
+  
