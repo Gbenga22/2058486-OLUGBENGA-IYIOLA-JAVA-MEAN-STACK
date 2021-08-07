@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simply Blogging</title>
+    <link rel="stylesheet" href="simplyBloggingCSS.css" type="text/css">
     <script src="simplyBloggingJS.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,7 +21,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#!">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">Add Blog</a></li>
-                    
+
                     <li class="nav-item"><a class="nav-link" href="#!">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">Contacts</a></li>
                 </ul>
@@ -51,21 +55,25 @@
                 </form>
             </div>
         </div>
-        
+
     </div>
    <hr/>
 
    <div class="container-fluid">
-    
-    <div class="row" >
-        <div class="col-2" id="FirstBlog"  style="border: 5px solid white; margin: 20px;"><div class ="row" id="FirstBlog1"> </div><div class ="row" id="FirstBlog2"></div></div>
-    
 
-        
-   
- 
-     
-        
+    <div class="row" id="imageContainer" style="
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 30px;">
+        </div>
+
+
+
+
+
+
+
         <div class="footer" style="position: fixed;
           left: 0;
           bottom: 0;
@@ -80,7 +88,7 @@
 
 
 
-        
-    
+
+
 </body>
 </html>
