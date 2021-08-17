@@ -1,0 +1,75 @@
+<div *ngIf="flag1">
+    <h4>Registration Page</h4>
+    <form [formGroup]="loginRef" (ngSubmit)="Register()">
+        <label>First Name</label>
+        <input type="text" formControlName="fname"><br>
+        <label>Last Name</label>
+        <input type="text" formControlName="lname"><br>
+        <label>Username</label>
+        <input type="text" formControlName="username" #usernameRef ><br>
+        <label >Password</label>
+        <input type="password" formControlName="pass" #passwordRef><br>
+        <!-- <input type="submit" value="Register" mat-button color="accent" [disabled]="!loginRef.valid"/> -->
+        <!-- <input type="reset" value="Reset" mat-button color="primary"/> -->
+
+        <button type="submit" mat-raised-button color="primary"  [disabled]="!loginRef.valid">Register</button>
+        <button type="reset" mat-raised-button style="background-color: bisque;">Reset</button>
+
+ </form>
+ <br>
+    <a (click)="login()" style="text-decoration: underline;">Log In</a>
+    
+</div>
+
+<div *ngIf ="flag2">
+    <h4>Login Page</h4>
+    <form [formGroup]="loginRef2" (ngSubmit)="checkUser()">
+        <label>Username</label>
+        <input type="text" formControlName="username1" #usernameRef2 ><br>
+        <label >Password</label>
+        <input type="password" formControlName="pass1" #passwordRef2><br>
+        <input type="submit" value="Login" [disabled]="!loginRef2.valid"/>
+    </form>
+    <br>
+    <a (click)="signup()" style="text-decoration: underline;">Sign Up</a>
+    
+</div>
+
+<div *ngIf ="flag3" style="text-align: center; background-color:white;">
+    <h4>Portfolio Page</h4>
+    <br>
+    <hr>
+
+    <p>Welcome {{Uname}}</p>
+    <br>
+<hr>    
+
+    <form [formGroup]="loginRef3" (ngSubmit)="saveData()">
+        <label>Contact Name</label>
+        <input type="text" formControlName="contactname" #usernameRef3 ><br>
+        <label >Phone No.</label>
+        <input type="number" formControlName="phoneno" #passwordRef3><br>
+        <input type="submit" value="Save" [disabled]="!loginRef3.valid"/>
+    </form>
+    <br>
+    <a (click)="login()" style="text-decoration: underline;">Log Out</a>
+    <hr>
+    
+    <table border=1 mdbTable striped="true" align="center">
+
+        <tr>
+            
+            <th>Name</th>
+            <th>Phone No</th>
+        </tr>
+        <tr *ngFor="let cont of Contacts">
+            
+            <td>{{cont.name}}</td>
+            <td>{{cont.phoneno}}</td>
+
+        </tr>
+
+    </table>
+
+       
+</div>
