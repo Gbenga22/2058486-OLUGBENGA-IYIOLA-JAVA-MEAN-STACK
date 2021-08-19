@@ -1,0 +1,63 @@
+
+<hr>
+<div>
+    <h2 style="text-decoration: underline;">To-do-Tasks</h2>
+    <form  [formGroup]="loginRef" (ngSubmit)="addTask()">
+        <mat-form-field>
+            <mat-label>ID</mat-label>
+            <input matInput formControlName="id" ngModel/>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" ngModel/>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Task</mat-label>
+            <input matInput formControlName="task" ngModel/>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Deadline</mat-label>
+            <input matInput [matDatepicker]="picker" matInput formControlName="date" ngModel>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <br>
+
+        <button type="submit" mat-raised-button color="primary">Sign In</button>
+        <button type="reset" mat-raised-button style="background-color: bisque;">Reset</button>
+    </form>
+    <br/>
+</div>
+
+
+<div  style="text-align: center; background-color:white;">
+    
+    
+    <hr>
+    <h2 style="text-decoration: underlinen;">To Do List</h2>
+<table mat-table border=3 striped="true" align="center">
+
+        <tr>
+            
+            <th>ID</th>
+            <th>Name</th>
+            <th>Task</th>
+            <th>Deadline</th>
+        </tr>
+        <tr *ngFor="let cont of Tasks">
+            
+            <td>{{cont.id}}</td>
+            <td>{{cont.name}}</td>
+            <td>{{cont.task}}</td>
+            <td>{{cont.deadline}}</td>
+
+        </tr>
+
+    </table>
+
+       
+</div>
