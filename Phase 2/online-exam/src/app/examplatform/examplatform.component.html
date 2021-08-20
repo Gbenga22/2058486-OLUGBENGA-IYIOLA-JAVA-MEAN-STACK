@@ -1,0 +1,17 @@
+
+<div style="text-align: right;"><h2>{{msg}}</h2></div>
+<div style="padding-left: 5px;">
+    <form #examRef="ngForm" (ngSubmit)="submit(examRef)">
+        
+        <div *ngFor="let q of allQuestions; let i=index">
+            
+            <p>{{i+1}}.{{"  "}}{{q.question}}</p>
+            <input type="radio" name={{q.question}} value={{q.ans1}} class="form-control" id="name" ngModel/>{{q.ans1}}<br/>
+            <input type="radio" name={{q.question}} value={{q.ans2}} class="form-control" id="name" ngModel/>{{q.ans2}}<br/>
+            <input type="radio" name={{q.question}} value={{q.ans3}} class="form-control" id="name" ngModel/>{{q.ans3}}<br/>
+            <input type="radio" name={{q.question}} value={{q.correctAns}} class="form-control" id="name" ngModel/>{{q.correctAns}}<br/><hr>
+        </div>
+        <input type="submit" value="submit"/>
+    </form>
+</div>
+<div style="text-align: right;"><h2>{{msg}}</h2></div>

@@ -1,0 +1,13 @@
+[
+  {"question":"5+5","ans1":"25","ans2":"11","ans3":"12","correctAns":"10"},
+  {"question":"America's current president is", "ans1":"Donald Trump","ans2":"Barack Obama","correctAns":"Joe Biden","ans3":"George Bush"},
+  {"question":"How many days are in a normal year?", "correctAns":"365","ans1":"7","ans2":"366","ans3":"30"},
+  {"question":"How many letters are there in the English alphabet?","ans1":"5","ans2":"21","ans3":"25","correctAns":"26"},
+  {"question":"How many sides are there in a triangle?","ans1":"5","ans2":"4","ans3":"3","correctAns":"None of the above"},
+  {"question":"Which month of the year has the least number of days?","ans1":"January","correctAns":"February","ans2":"March","ans3":"April"},
+  {"question":"Which is the largest animal in the world","correctAns":"Blue whale", "ans1":"Lion","ans2":"Elephant","ans3":"Hippotamus"},
+  {"question":"How many zeros are there in one hundred thousand","ans1":"0","ans2":"3","ans3":"4","correctAns":"5"},
+  {"question":"How many hours are there in two days?","ans1":"24","ans2":"36","ans3":"72","correctAns":"48"},
+  {"question":"How many weeks are there in one year?","ans1":"24","ans2":"48", "correctAns":"52", "ans3":"36"}
+]
+
