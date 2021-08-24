@@ -4,30 +4,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ExamplatformComponent } from './examplatform/examplatform.component';
-import {MatButtonModule} from "@angular/material/button";
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { ExamComponent } from './exam/exam.component';
+import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
-import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule} from "@angular/material/button";
 import { HttpClientModule } from '@angular/common/http';
+import { ExamService } from './exam.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExamplatformComponent
+    ExamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+  
+
   ],
-  providers: [],
+  providers: [ExamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,18 @@
+<div style="text-align: right; padding-right: 150px;"><h1 [ngStyle]="{'color':checkResult? 'green': 'red'}">{{msg}}</h1></div>
+<div style="padding-left: 20px; ">
+    <form #examRef="ngForm" (ngSubmit)="submit(examRef)">
+        
+        <div *ngFor="let q of allQuestion; let i=index" style="padding-bottom: 10px; ">
+            
+            <p>{{i+1}}.{{"  "}}{{q.question}}</p>
+            <input type="radio" name={{q.question}} value={{q.ans1}} class="form-control" id="name" ngModel/>{{q.ans1}}<br/>
+            <input type="radio" name={{q.question}} value={{q.ans2}} class="form-control" id="name" ngModel/>{{q.ans2}}<br/>
+            <input type="radio" name={{q.question}} value={{q.ans3}} class="form-control" id="name" ngModel/>{{q.ans3}}<br/>
+            <input type="radio" name={{q.question}} value={{q.ans4}} class="form-control" id="name" ngModel/>{{q.ans4}}<br/><hr>
+        </div>
+        <input  mat-raised-button color="primary" type="submit" value="submit" style="padding-top: 5px;background-color:mediumseagreen;font-size: 30px ;"/>
+    </form>
+</div>
+
+<div style="text-align: right; padding-top: 20px; padding-right: 150px;">
+    <h1 [ngStyle]="{'color':checkResult? 'green': 'red'}">{{msg}}</h1></div>
