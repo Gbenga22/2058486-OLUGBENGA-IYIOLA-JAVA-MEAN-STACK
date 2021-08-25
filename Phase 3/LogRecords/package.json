@@ -1,0 +1,15 @@
+{
+  "name": "log-records",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logRecords.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-and-time": "^2.0.0",
+    "readline-sync": "^1.4.10"
+  }
+}
