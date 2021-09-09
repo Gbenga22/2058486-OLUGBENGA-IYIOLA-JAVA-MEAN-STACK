@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+    var socket = io();
+      const Form_Message= document.getElementById('form-container')
+      
+      info = ()=>{
+            dateTime = gettheDate()
+            let name = document.getElementById("client-name").value;
+            let message = document.getElementById("user-message").value;
+            addNewMessage(`(${dateTime}) ${name} : ${message}`)
+            socket.emit('send-chat-message',{ CLIENTNAME: name, CLIENTMSG: message})
+            message.value = ''
+
+            var frm = document.getElementsByName('message')[0];
+            frm.reset();  // Reset all form data
+            return false; // Prevent page refresh
+        }
+
+        socket.on('servermessage', data => {
+            dateTime = gettheDate()
+            addNewMessage(`(${dateTime}) Server: ${data}`)
+            console.log(data)
+      })
+
+
+      socket.on('chat-message', data => {
+          dateTime = gettheDate()
+          addNewMessage(`(${dateTime}) Server: ${data}`)
+          console.log(data)
+      })
+      
+      
+      function gettheDate(){
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() //+ ":"  + today.getSeconds();
+            var dateTime = time;
+
+            return dateTime;
+
+
+      }
+      
+      function addNewMessage(message) {
+          let Container_Message = document.getElementById('chatbox')
+          let newMessage = document.createElement('div')
+          newMessage.innerText = message
+          Container_Message.append(newMessage)
+        }
+    </script>
+    
+</head>
+<body>
+
+    <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+
+ 
+            <div id="chatbox"></div>
+ 
+            <form name="message" action="" id="form-container">
+                <label for="">Name</label>
+                <input type="text" name="clientname" id="client-name">
+                <textarea placeholder="Type message.." name="usermsg" id="user-message" required></textarea><br>
+                <button name="submitmsg" type="button" id="submitmsg" onclick="info()" >Send</button>
+              
+            </form>
+        </div>
+ 
+
+      
+    
+</body>
+</html>
